@@ -1,0 +1,17 @@
+<div class="container mt-4">
+  {{#if success_msg}}
+  <div class="alert alert-success alert-dismissable">
+    <button class="close" type="button" data-dismiss="alert">
+      <span>&times;</span>
+    </button>
+    {{success_msg}}
+  </div>
+  {{/if}} {{#if error_msg}}
+  <div class="alert alert-danger alert-dismissable">
+    <button class="close" type="button" data-dismiss="alert">
+      <span>&times;</span>
+    </button>
+    {{error_msg}}
+  </div>
+  {{/if}}
+</div>

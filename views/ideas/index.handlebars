@@ -1,0 +1,24 @@
+<div class="container">
+  {{#each ideas}}
+  <div class="card card-body my-5">
+    <h4 class="display-4">{{title}}</h4>
+    <small>Created on {{date}}</small>
+    <br>
+    <p class="lead mt-2">{{details}}</p>
+    <a href="/ideas/edit/{{id}}" class="btn btn-dark btn-block mb-2">Edit</a>
+    <form action="/ideas/{{id}}?_method=DELETE" method="post">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" class="btn btn-danger btn-block" value="Delete">
+    </form>
+  </div>
+  {{else}}
+  <div class="jumbotron jumbotron-fluid mt-5">
+    <div class="container">
+      <p class="lead">Oops, There are no ideas listed!</p>
+      <br>
+      <a href="/ideas/add" class="btn btn-outline-danger btn-lg">Why don't you jot some ideas down?</a>
+    </div>
+  </div>
+  {{/each}}
+  <div style="margin-top:250px;"></div>
+</div>

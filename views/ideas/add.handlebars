@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="card card-body my-5">
+    <h3 class="display-4">What is your idea?</h3>
+    <form action="/ideas" method="post">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" class="form-control" name="title" placeholder="Enter a title">
+      </div>
+      <div class="form-group">
+        <label for="details">Details</label>
+        <textarea class="form-control" name="details" placeholder="Description"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block">
+          <i class="fas fa-upload"></i>
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

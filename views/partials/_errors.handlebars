@@ -1,0 +1,17 @@
+<div class="container mt-4">
+    {{#if error}}
+    <div class="alert alert-danger alert-dismissable">
+        <button class="close" type="button" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        {{error}}
+    </div>
+    {{/if}} {{#each errors}}
+    <div class="alert alert-danger alert-dismissable">
+        <button class="close" type="button" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        {{text}}
+    </div>
+    {{else}} {{/each}}
+</div>
